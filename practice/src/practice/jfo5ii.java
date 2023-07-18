@@ -1,0 +1,28 @@
+package practice;
+
+import java.util.Scanner;
+
+public class jfo5ii {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a code color: ");
+		int code = sc.nextInt();
+		
+		if(code==1) {
+			System.out.println("The next Traffic Light is Green");
+		}
+		else if(code==2) {
+			System.out.println("The next Traffic Light is Yellow");
+		}
+		else if(code==3) {
+			System.out.println("The next Traffic Light is Red");
+		}
+		else {
+			System.out.println("Invalid color");
+		}
+		sc.close();
+		
+	}
+
+}

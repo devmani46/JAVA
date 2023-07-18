@@ -1,0 +1,17 @@
+package secondProject;
+
+public class smile {
+
+	public static void main(String[] args) {
+		System.out.println("  cccc  ");
+		System.out.println(" c        c ");
+		System.out.println("c c  c c");
+		System.out.println("c      c");
+		System.out.println("c c  c c");
+		System.out.println("c  cc  c");
+		System.out.println(" c    c ");
+		System.out.println("  cccc  ");
+
+	}
+
+}

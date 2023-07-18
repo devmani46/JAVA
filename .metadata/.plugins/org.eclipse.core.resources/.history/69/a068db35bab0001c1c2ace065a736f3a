@@ -1,0 +1,31 @@
+
+public class JaaApplication5 {
+
+	public static void main(String[] args) {
+//		printing cat
+		System.out.println("    /\\      /\\");
+		System.out.println("   /  \\____/  \\");
+		System.out.println("  /            \\");
+		System.out.println(" (  /\\     /\\   )");
+		System.out.println(" ====   v    ====");
+		System.out.println(" ====(__|__)=====");
+		System.out.println("   (           )   ");
+		System.out.println("     (________)   ");
+		
+		System.out.println("");		
+		System.out.println("");		
+		System.out.println("");		
+		System.out.println("");		
+//		printing smily face
+		System.out.println("    @@@@    ");
+		System.out.println("  @      @  ");
+		System.out.println("@  @   @  @ ");
+		System.out.println("@          @");
+		System.out.println("@  @    @  @");
+		System.out.println("@    @@    @");
+		System.out.println(" @        @ ");
+		System.out.println("    @@@@    ");
+		
+	}
+
+}

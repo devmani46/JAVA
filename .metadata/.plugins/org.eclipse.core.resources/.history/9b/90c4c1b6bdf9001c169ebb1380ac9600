@@ -1,0 +1,10 @@
+package package1;
+
+public class access1 {
+	
+	//default, public,private and protected
+	
+	public int hours = 2;
+	public int minutes = 46;
+	
+}

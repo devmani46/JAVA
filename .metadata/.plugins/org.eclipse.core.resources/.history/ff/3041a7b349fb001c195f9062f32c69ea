@@ -1,0 +1,61 @@
+package practice;
+
+import java.util.Scanner;
+
+public class currency {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		boolean quit;
+		while(quit=true) {
+		System.out.print("Enter Neplease rupees: Rs");
+		double nrp = sc.nextDouble();
+		
+		
+		System.out.println("Convert it into:");
+		System.out.println("1.American Dollar");
+		System.out.println("2. Indian Rupees");
+		System.out.println("3.Austriallian Dollar");
+		System.out.println("Please select the number accordingly");
+		int c = sc.nextInt();
+		
+		double USD,IC,AUD;
+		switch(c) {
+		case 1:
+			USD = nrp /126; 
+			System.out.println("Rs"+nrp +" converted to USD is:"+USD+"$");
+			break;
+		case 2:
+			IC = nrp/1.6; 
+			System.out.println("Rs"+nrp +" converted to indian currency is: Rs"+IC);
+			break;
+		case 3:
+			AUD = nrp/80; 
+			System.out.println("Rs"+nrp +" converted to USD is:"+AUD+"$");
+			break;
+		default:
+			System.out.println("Please enter from 1-3");
+		}
+	
+		
+		Scanner sc1 = new Scanner(System.in);
+		System.out.println("Do You want to quit?[y/n]");
+		String q = sc1.nextLine().toLowerCase();
+		if(q.equals("y")||q.equals("yes")) {
+			quit = true;
+			break;
+		}
+		else if(q.equals("n")||q.equals("no")){
+			continue;
+		}
+		else {
+			System.out.println("Please enter y/yes or n/no");	
+			break;
+		}
+		}
+		sc.close();
+		
+	}
+	
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;forLoop&apos; to &apos;12.forLoop&apos;&#x0D;&#x0A;- Original element: &apos;forLoop&apos;&#x0D;&#x0A;- Renamed element: &apos;forLoop&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;forLoop&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=forLoop" name="12.forLoop" references="true" stamp="1649952063515" version="1.0"/>
+</session>

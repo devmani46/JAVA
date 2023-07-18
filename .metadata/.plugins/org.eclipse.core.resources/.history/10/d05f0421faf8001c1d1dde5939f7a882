@@ -1,0 +1,19 @@
+package practice;
+
+import java.util.Scanner;
+
+public class jfo6 {
+	public static void main(String[] args) {
+		int pin = 4693;
+		Scanner sc = new Scanner(System.in);
+		int guessPin = 0 ;
+		
+		while(guessPin == pin) {
+			System.out.print("Enter pin code: ");
+			guessPin = sc.nextInt();
+			
+			
+		}
+		System.out.println("You have entered correct pin");
+	}
+}

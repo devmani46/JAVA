@@ -1,0 +1,31 @@
+package practice;
+
+//import java.util.Scanner;
+
+public class jfo6iii {
+
+	  public static void main(String[] args) {    
+	        printRectangle(10, 6);
+	    }
+
+	    public static void printRectangle(int width, int height) {
+	        int i;
+	        int j;
+	        for ( i = 0; i < height; i++ ) {
+	            for ( j = 0; j < width; j++) {
+	                printStars(width);
+	            }
+	            System.out.println("");
+	        }                
+	    }
+
+	    public static void printStars(int amount) {   
+	        System.out.print(" * ");
+	    }
+	
+	
+	
+	public static void createTriangle() {
+		
+	}
+}

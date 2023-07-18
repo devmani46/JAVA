@@ -1,0 +1,70 @@
+package practice;
+import java.util.Scanner;
+
+
+public class sample {
+    public static void main (String [] args){
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter your name: ");
+        String name = sc.nextLine();
+        
+        System.out.println("Enter your phone number: ");
+        String no = sc.nextLine();
+         
+        System.out.println("Enter parking number: ");
+        int parkingno = sc.nextInt();
+        
+        
+        System.out.println("Enter the package you want (full day/ full week/ one night/ office hour): ");  
+        String A = sc.nextLine();
+        
+        System.out.println("Are you a student: (Y/N)");
+        String student = sc.nextLine();
+        
+        System.out.println("Name: " + name );
+        System.out.println("Mobile no: " + no);
+        System.out.println("Parking Number: " + parkingno);
+        
+        System.out.println("Service Name :" + A);
+        System.out.println("Student (Y/N): " + student);
+        
+        
+      if (A.equals("full day")){
+          System.out.println("Fee: Rs400");
+      }
+         
+      else if (A.equals("full day") && (student.equals("yes") || student.equals("Y"))){
+          System.out.println("Fee: Rs200");
+   }
+       else if (A.equals("full week") && (student.equals("no")|| student.equals("N"))){
+          System.out.println("Fee: Rs2000");    
+      }
+       
+      
+       else if (A.equals("full week") && (student.equals("yes")|| student.equals("Y"))){
+          System.out.println("Fee: Rs1000");
+       }
+      else if (A.equals("one night") && (student.equals("no") || student.equals("N"))){
+          System.out.println("Fee: Rs500");
+      }
+      
+      else if (A.equals("one night") && (student.equals("yes") || student.equals("Y"))){
+          System.out.println("Fee: Rs400");
+      }
+      
+      else if (A.equals("office hour") && (student.equals("no") || student.equals("N"))){
+          System.out.println("Fee: Rs200");
+      }
+      
+      else if (A.equals("office hour") && (student.equals("yes") || student.equals("Y"))){
+          System.out.println("Fee: Rs100");
+      }
+      
+      else {
+          System.out.println("Enter valid package. ");
+          System.out.println("ERROR-404");
+          
+      }
+  
+    }
+}

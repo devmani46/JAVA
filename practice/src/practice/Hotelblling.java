@@ -1,0 +1,95 @@
+package practice;
+import java.util.ArrayList;  
+import java.util.List;  
+import java.util.Scanner;  
+ 
+class BillHotel   
+    {  
+     
+         String ProdName;  
+         int Quantity;  
+         double Pricee;  
+         double TotalPrice;  
+           
+        // constructor  
+        BillHotel( String ProdName, int Quantity, double Pricee, double TotalPrice)   
+        {  
+             
+            this.ProdName = ProdName;  
+            this.Quantity = Quantity;  
+            this.Pricee = Pricee;  
+            this.TotalPrice = TotalPrice;  
+        }  
+            // getter methods  
+                public String getPname()   
+                {  
+                    return ProdName;  
+                }  
+                public int getQty()   
+                {  
+                    return Quantity;  
+                }  
+                public double getPrice()   
+                {  
+                    return Pricee;  
+                }  
+                public double getTotalPrice()   
+                {  
+                    return TotalPrice;  
+                }  
+                    
+        public static void main(String args[])   
+            {  
+                // variables  
+
+                String productName = null;  
+                int quantity = 0;  
+                double Pricee = 0.0;  
+                double TotalPrice = 0.0;  
+                double overAllPrice = 0.0;  
+                double subtotal=0.0, discount=0.0;  
+                char choice = '\0';  
+   
+                
+                Scanner scan = new Scanner(System.in);  
+                System.out.print("Enter Customer Name: ");  
+                String customerName=scan.nextLine();  
+
+                //creating an ArrayList to store the product  
+                List<BillHotel> product = new ArrayList<BillHotel>();  
+                do   
+                    {  
+                        // read input values  
+                        System.out.println("Enter the product details: ");  
+                        System.out.print("Product Name: ");  
+                        productName = scan.nextLine();  
+                        System.out.print("Quantity: ");  
+                        quantity = scan.nextInt();  
+                        System.out.print("Price (per unit): ");  
+                        Pricee = scan.nextDouble();  
+                        TotalPrice = Pricee * quantity;  
+                        overAllPrice = overAllPrice + TotalPrice;  
+                        product.add( new BillHotel(productName, quantity, Pricee, TotalPrice) );  
+                        System.out.print("Want to add more items? (y or n): ");  
+                        choice = scan.next().charAt(0);  
+                        scan.nextLine();  
+                    }   
+                while (choice == 'y' || choice == 'Y');  
+                for (BillHotel p : product)   
+                {  
+
+
+                System.out.println("\n\t\t\t\t\t\t\t\t\t\tTotal Amount (Rs.) " +overAllPrice);  
+                discount = overAllPrice*2/100;  
+                System.out.println("\n\t\t\t\t\t\t\t\t\t\t    Discount (Rs.) " +discount);  
+                subtotal = overAllPrice-discount;   
+                System.out.println("\n\t\t\t\t\t\t\t\t\t\t          Subtotal  "+subtotal);  
+
+
+                System.out.println("\t\t\t\t----------------Thank You-----------------");  
+                System.out.println("\t\t\t\t               Visit Again");  
+                scan.close();  
+    }
+    
+            }
+}

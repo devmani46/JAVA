@@ -1,0 +1,40 @@
+package finalExam;
+
+import java.util.Scanner;
+
+public class question2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("[1]NRP to USD");
+		System.out.println("[2]USD to NPR");
+		System.out.print("Select(1/2):");
+		int select = sc.nextInt();
+		int i = 0,j;
+		switch(select) {
+		case 1:
+			System.out.println("NRP \t USD");
+			for(i = 1000;i<=9000;i+=1000) {
+				System.out.println(i);
+			}
+			break;
+		case 2:
+			for(j=100;j<=900;j++) {
+				System.out.println(j);
+			}
+			break;
+		}
+		nprToMyr(i);
+		usdToNpr(j);
+		}
+	public static double nprToMyr(double npr) {
+		
+		return npr;
+	}
+	
+	public static double usdToNpr(double usd) {
+		return usd;
+		
+		
+	}
+}

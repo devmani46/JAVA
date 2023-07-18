@@ -1,0 +1,87 @@
+package practice;
+
+import java.util.Scanner;
+
+public class jfo8 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Your name: ");
+		String name = sc.nextLine();
+		
+		System.out.print("Enter your contact number: ");
+		String number = sc.nextLine();
+		
+		System.out.print("Enter parking number: ");
+		int pNo = sc.nextInt();
+//		
+//
+//		
+//		System.out.println("Which package do you want to choose: ");
+//		System.out.println("1. Full Day");
+//		System.out.println("2. One Night");
+//		System.out.println("3. Office Hours");
+//		System.out.println("4. Full Week");
+//		System.out.println("PLease select the number from 1-4");
+//		String n = sc.nextLine().toLowerCase();
+//		
+//		String std = "";
+//		int fee;
+//		switch(n) {
+//		case "1|| full day": 
+//			if (std.equals("y || yes")) {
+//				fee = 200;
+//			}
+//				else if (std.equals("n||no")) {
+//					fee = 400;
+//				}
+//
+//			break;
+//		case "2|| one night": 
+//			if (std.equals("y || yes")) {
+//				fee = 400;
+//			}
+//				else if (std.equals("n||no")) {
+//					fee = 500;
+//				}
+//
+//			break;
+//		case "3|| office hours": 
+//			if (std.equals("y || yes")) {
+//				fee = 100;
+//			}
+//				else if (std.equals("n||no")) {
+//					fee = 200;
+//				}
+//
+//			break;
+//		case "4||full week": 
+//			if (std.equals("y || yes")) {
+//				fee = 1000;
+//			}
+//				else if (std.equals("n||no")) {
+//					fee = 2000;
+//				}
+//
+//			break;
+//		default:
+//			System.out.println("Invalid choice");
+//			
+//		}
+		System.out.println("Are you student?(Y/N)");
+		String std = sc.nextLine();
+		
+		System.out.println("Name :"+ name);
+		System.out.println("Mobile number: "+ number);
+		System.out.println("Parking ID: "+ pNo);
+		System.out.println("Student(Y/N)"+std);
+		if(std.equals("y||yes"))
+			System.out.println("School Name: IIMS College");
+		else {
+			System.out.println("");
+		}
+		
+		
+	}
+}
+     

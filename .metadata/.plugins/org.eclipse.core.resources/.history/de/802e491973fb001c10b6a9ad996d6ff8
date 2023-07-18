@@ -1,0 +1,106 @@
+package finalexam.question2;
+
+import java.util.Scanner;
+public class q2 {
+
+    static double userAmount;
+    static int userCurrency;
+    static int exchangedCurrency;
+    static double exchangedAmount;
+    static boolean exchangeAgain = true;
+    
+    public static void main(String[] args) {
+        while (exchangeAgain){
+            System.out.println("Currency Exchange");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter your amount:");
+            userAmount = sc.nextDouble();
+            System.out.println("Choose your currency type:");
+            System.out.println("1.NPR\n2.INR\n3.USD\n4.MYR");
+            userCurrency = sc.nextInt();
+            System.out.println("Choose the currency type you want to exchange:");
+            System.out.println("1.NPR\n2.INR\n3.USD\n4.MYR");
+            exchangedCurrency = sc.nextInt();
+            CurrencyExchanger(userAmount, userCurrency, exchangedCurrency);
+            System.out.println("Do you want to exchange again ? Type 'Y' or 'N' :");
+            String userChoice = sc.next().toLowerCase();
+            if (userChoice.equals("n")){
+                exchangeAgain = false;
+            }
+            else if (userChoice.equals("y")) {
+                exchangeAgain = true;
+            }
+        }
+
+    }
+
+    public static void CurrencyExchanger(double amount, int currency, int finalCurrency) {
+        switch (currency){
+            case 1:
+                if (finalCurrency == 2){
+                    exchangedAmount = 0.63 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                else if (finalCurrency == 3){
+                    exchangedAmount = 0.0079 * amount;
+                } else if (finalCurrency == 4) {
+                    exchangedAmount = 0.035 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                break;
+            case 2:
+                if (finalCurrency == 1){
+                    exchangedAmount = 1.60 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                else if (finalCurrency == 3){
+                    exchangedAmount = 0.013 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                } else if (finalCurrency == 4) {
+                    exchangedAmount = 0.056 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                break;
+            case 3:
+                if (finalCurrency == 1){
+                    exchangedAmount = 126.27 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                else if (finalCurrency == 2){
+                    exchangedAmount = 78.95 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                else if (finalCurrency == 4){
+                    exchangedAmount = 4.41 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                break;
+            case 4:
+                if (finalCurrency == 1){
+                    exchangedAmount = 28.65 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                else if (finalCurrency == 2){
+                    exchangedAmount = 17.91 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                else if (finalCurrency == 3){
+                    exchangedAmount = 0.23 * amount;
+                    System.out.println("Your Amount : "+amount);
+                    System.out.println("Exchanged Amount : "+exchangedAmount);
+                }
+                break;
+        }
+
+    }
+}

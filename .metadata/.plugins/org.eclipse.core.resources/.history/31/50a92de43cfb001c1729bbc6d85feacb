@@ -1,0 +1,34 @@
+
+public class account {
+	String name;
+	int age;
+	public static void main(String[] args) {
+		account a1 = new account();
+		a1.setName("dev");
+		a1.setAge(18);
+		a1.printDetails();
+
+	}
+	public void setName(String name) {
+		this.name = name;
+		
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public Integer getAge() {
+		return this.age;
+	}
+	public void printDetails() {
+		System.out.println(name + "," + age);
+		
+	}
+	
+	
+}

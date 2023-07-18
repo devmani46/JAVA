@@ -1,0 +1,27 @@
+package practice;
+
+import java.util.Scanner;
+
+public class jfo6iii {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter height of rectangle: ");
+		int hR = sc.nextInt();
+		System.out.println("Enter width of rectangle: ");
+		int wR = sc.nextInt();
+		String symbol = "*";
+		createRectangle(hR,wR,symbol);
+
+		
+
+	}
+	public static void createRectangle(int height, int width, String sym) {
+		for(int i = 1;i<=height;i++) {
+			System.out.print(sym);
+		}
+	}
+	public static void createTriangle() {
+		
+	}
+}

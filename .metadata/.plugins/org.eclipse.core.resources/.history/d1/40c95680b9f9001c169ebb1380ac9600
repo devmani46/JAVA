@@ -1,0 +1,73 @@
+package practice;
+public class Card {
+    // All fields must be private.
+    // Provide getter and any necessary setter methods.
+   
+    // Cards store information about their current credit balance,
+    // ticket balance, and card number.
+    private double creditBalance;
+    private int ticketBalance;
+    private int cardNumber;
+   
+    // Every card is created with a unique integer identification number
+    private static int counter = 1;
+
+    public Card() {
+       this.creditBalance = 0;
+       this.ticketBalance = 0;
+       this.cardNumber = counter;
+       counter++;
+    }
+
+    // Provide getter and any necessary setter methods.
+    public double getCreditBalance() {
+       return creditBalance;
+    }
+
+    public int getTicketBalance() {
+       return ticketBalance;
+    }
+
+    public int getCardNumber() {
+       return cardNumber;
+    }
+   
+    public boolean reduceCredit(double amount){
+       if (creditBalance >= amount) {
+            creditBalance -= amount;                  
+            return true;
+       }
+       return false;
+    }
+   
+    public boolean reduceTicket(int amount){
+       if (ticketBalance >= amount) {
+            ticketBalance -= amount;                  
+            return true;
+       }
+       return false;
+    }
+   
+    public boolean addCredit(double amount){
+       if (amount >= 0) {
+            creditBalance += amount;                  
+            return true;
+       }
+       return false;
+    }
+   
+    public boolean addTicket(int num){
+       if (num < 0) {
+            return false;
+       }
+       ticketBalance += num;
+       return true;
+    }
+
+    @Override
+    public String toString() {
+       return "Card number: " + cardNumber + "; Credit: " + creditBalance
+                + "; Ticket: " + ticketBalance;
+    }
+   
+}

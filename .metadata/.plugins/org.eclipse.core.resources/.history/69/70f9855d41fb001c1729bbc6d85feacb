@@ -1,0 +1,38 @@
+package practice;
+
+import java.util.Scanner;
+
+public class currency {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		boolean quit;
+		while(quit=true) {
+		System.out.println("Enter Neplease rupees");
+		double nrp = sc.nextDouble();
+		
+		
+		System.out.println("Convert it into:");
+		System.out.println("1.American Dollar");
+		System.out.println("2. Indian Rupees");
+		System.out.println("3.Austriallian Dollar");
+		System.out.println("Please select the number accordingly");
+		
+		Scanner sc1 = new Scanner(System.in);
+		System.out.println("Do You want to quit?");
+		String q = sc1.nextLine();
+		if(q.equals("y")||q.equals("yes")) {
+			quit = false;
+			break;
+		}
+		else if(q.equals("n")||q.equals("no")){
+			continue;
+		}
+		else {
+			System.out.println("Please enter y/yes or n/no");
+			break;
+		}
+		}
+	}
+
+}
